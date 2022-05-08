@@ -7,11 +7,36 @@ import React from 'react';
 
 function WelcomeScreen(props) {
   return (
-   <ImageBackground
-     source={require('./app/assets/background.jpg')} 
-   >
-   </ImageBackground>
+ 
+   <View style={styles.container}>
+          <Text style={styles.logo}>Taboo</Text>
+          <view style={styles.inputView}>
+            <TextInput style={styles.inputText}
+                       placeholder="Email"
+                       placeholderTextColor="white"
+                       onChangeText={text => this.setState({email:text})}/>
+          </view>
+          <View style={styles.inputView}>
+            <TextInput secureTextEntry
+                       style={styles.inputText}
+                       placeholder="Password"
+                       placeholderTextColor="white"
+                       onChangeText={text => this.setState({password:text})}/>
+           </View>
+           <TouchableOpacity>
+             <Text style={styles.forgot}>Forgot Password?</Text>
+           </TouchableOpacity>
    
+           <TouchableOpacity style={styles.loginBtn}>
+             <Text style={styles.loginText}>LOG IN</Text>
+           </TouchableOpacity>
+   
+           <TouchableOpacity>
+           <Text style={styles.loginText}>Sign Up</Text>
+           </TouchableOpacity>
+   
+         </View>
+         
   );
 }
 
