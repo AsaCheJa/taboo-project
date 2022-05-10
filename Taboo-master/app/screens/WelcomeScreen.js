@@ -15,7 +15,10 @@ function WelcomeScreen(props) {
     <Image style={styles.logo} source={require("../assets/LOGO.png")}/>
    
     <View style={styles.container}>
+
+
             <Text style={styles.title}>SOCIALLY CONSCIOUS PERIOD CARE</Text>
+
             <view style={styles.inputView}>
               <TextInput style={styles.inputText}
                         placeholder="Email"
@@ -40,11 +43,14 @@ function WelcomeScreen(props) {
             <TouchableOpacity>
             <Text style={styles.loginText}>Sign Up</Text>
             </TouchableOpacity>
+
+
             <Image style={{
                       width: 64,
                       height: 64
             }}
-            sourcr={require('../assets/taboo-advantage.PNG')}/>
+            source={require('../assets/taboo-advantage.PNG')}/>
+
     
           </View>
     </View>     
