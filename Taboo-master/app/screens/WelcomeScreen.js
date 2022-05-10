@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     },
     forgot:{
       color:"black",
-      fontSize:12
+      fontSize:14
     },
     loginBtn:{
       width:"80%",
