@@ -44,7 +44,7 @@ function WelcomeScreen(props) {
                       width: 64,
                       height: 64
             }}
-            sourcr={require('../assets/taboo-advantage.PNG')}/>
+            source={require('../assets/taboo-advantage.PNG')}/>
     
           </View>
     </View>     
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
-    logo:{
+    title:{
       fontWeight:"bold",
       fontSize:50,
       color:"white",
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     },
     forgot:{
       color:"black",
-      fontSize:11
+      fontSize:12
     },
     loginBtn:{
       width:"80%",
