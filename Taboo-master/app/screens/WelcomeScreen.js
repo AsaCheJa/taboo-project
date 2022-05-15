@@ -1,113 +1,52 @@
 import { 
     StyleSheet, Image,
-    ImageBackground, 
-    View, TextInput, TouchableOpacity
+    ImageBackground, View, TextInput, TouchableOpacity, Text
 } from 'react-native';
 import React from 'react';
 
 function WelcomeScreen(props) {
-  state ={
-         email:"",
-         password:""
-       }
-  return (
-   <View>
-    <Image style={styles.logo} source={require("../assets/LOGO.png")}/>
-   
+ 
+  return(
     <View style={styles.container}>
-
-
-            <Text style={styles.title}>SOCIALLY CONSCIOUS PERIOD CARE</Text>
-
-            <view style={styles.inputView}>
-              <TextInput style={styles.inputText}
-                        placeholder="Email"
-                        placeholderTextColor="white"
-                        onChangeText={text => this.setState({email:text})}/>
-            </view>
-            <View style={styles.inputView}>
-              <TextInput secureTextEntry
-                        style={styles.inputText}
-                        placeholder="Password"
-                        placeholderTextColor="white"
-                        onChangeText={text => this.setState({password:text})}/>
-            </View>
-            <TouchableOpacity>
-              <Text style={styles.forgot}>Forgot Password?</Text>
-            </TouchableOpacity>
-    
-            <TouchableOpacity style={styles.loginBtn}>
-              <Text style={styles.loginText}>LOG IN</Text>
-            </TouchableOpacity>
-    
-            <TouchableOpacity>
-            <Text style={styles.loginText}>Sign Up</Text>
-            </TouchableOpacity>
-
-
-            <Image style={{
-                      width: 64,
-                      height: 64
-            }}
-            source={require('../assets/taboo-advantage.PNG')}/>
-
-    
-          </View>
-    </View>     
-  );
+        <Image style={{width: 100, height: 100}}
+              source={require('../assets/LOGO.png')}/>
+        <Text style={styles.logo}>PERIOD CARE THAT{"\n"}CARES.</Text>
+        <View style={styles.inputView}>
+          <TextInput style={styles.inputText}
+                    placeholder="Email"
+                    placeholderTextColor="black"
+                    onChangeText={text => this.setState({email:text})}/>
+        </View>
+        <View style={styles.inputView}>
+          <TextInput secureTextEntry
+                    style={styles.inputText}
+                    placeholder="Password"
+                    placeholderTextColor="black"
+                    onChangeText={text => this.setState({password:text})}/>
+        </View>
+        <TouchableOpacity>
+            <Text style={styles.forgot}>Forgot Password?</Text>
+        </TouchableOpacity>
+        
+        <TouchableOpacity style={styles.loginBtn}>
+            <Text style={styles.loginText}>LOG IN</Text>
+        </TouchableOpacity>
+        
+        <View style={styles.row}>
+          <Text>New to Taboo?</Text>
+        <TouchableOpacity>
+            <Text style={styles.sighUpText}>Sign Up</Text>
+        </TouchableOpacity>
+        </View>
+       
+      </View>
+    );
 }
 
-// export default class Apps extends React.Component {
-   
-//   state ={
-//      email:"",
-//      password:""
-//    }
-//    render(){
-//      return(
-//      <View style={styles.container}>
-//        <Text style={styles.logo}>Taboo</Text>
-//        <view style={styles.inputView}>
-//          <TextInput style={styles.inputText}
-//                     placeholder="Email"
-//                     placeholderTextColor="white"
-//                     onChangeText={text => this.setState({email:text})}/>
-//        </view>
-//        <View style={styles.inputView}>
-//          <TextInput secureTextEntry
-//                     style={styles.inputText}
-//                     placeholder="Password"
-//                     placeholderTextColor="white"
-//                     onChangeText={text => this.setState({password:text})}/>
-//         </View>
-//         <TouchableOpacity>
-//           <Text style={styles.forgot}>Forgot Password?</Text>
-//         </TouchableOpacity>
 
-//         <TouchableOpacity style={styles.loginBtn}>
-//           <Text style={styles.loginText}>LOG IN</Text>
-//         </TouchableOpacity>
-
-//         <TouchableOpacity>
-//         <Text style={styles.loginText}>Sign Up</Text>
-//         </TouchableOpacity>
-
-//       </View>
-//      );
-//    }
-// }
 
 const styles = StyleSheet.create({
-    background: {
-        flex: 1,
-        justifyContent: "flex-end",    
-    },
-    loginButton: {
-        width: ' 100%',
-        height: 70,
-        backColor: ' #fc5c65',
-    },
-
+   
     container: {
       flex: 1,
       backgroundColor: '#f4bbca',
@@ -116,28 +55,33 @@ const styles = StyleSheet.create({
     },
     logo:{
       fontWeight:"bold",
-      fontSize:50,
+      fontSize:24,
       color:"white",
-      marginBottom:40
+      marginTop:30,
+      marginBottom:40,
+      textAlign:"center"
     },
     inputView:{
-      width:"80%",
+      width:"70%",
       backgroundColor:"white",
       borderRadius:25,
       height:50,
       marginBottom:20,
       justifyContent:"center",
       padding:20
-    }, inputText:{
+    }, 
+    inputText:{
       height:50,
       color:"black"
     },
     forgot:{
       color:"black",
-      fontSize:11
+      fontSize:12,
+      textAlign: "right",
+      marginLeft: 300
     },
     loginBtn:{
-      width:"80%",
+      width:"70%",
       backgroundColor:"#ed216a",
       borderRadius:25,
       height:50,
@@ -146,9 +90,17 @@ const styles = StyleSheet.create({
       marginTop:40,
       marginBottom:10
     },
-    loginText:{
-      color:"white"
+    sighUpText:{
+      color:"white",
+      margin: 10,
+      
+    },
+    
+    row:{
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
     }
-})
+});
 
 export default WelcomeScreen;
