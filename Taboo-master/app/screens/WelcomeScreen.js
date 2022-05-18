@@ -33,9 +33,9 @@ function WelcomeScreen(props) {
         </TouchableOpacity>
         
         <View style={styles.row}>
-          <Text>New to Taboo?</Text>
+          <Text>New to Taboo?   </Text>
         <TouchableOpacity>
-            <Text style={styles.sighUpText}>Sign Up</Text>
+            <Text style={styles.signUpText}>Sign Up</Text>
         </TouchableOpacity>
         </View>
        
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
       marginTop:40,
       marginBottom:10
     },
-    sighUpText:{
+    signUpText:{
       color:"white",
       margin: 10,
       
