@@ -8,7 +8,7 @@ import{NavigationContainer} from '@react-navigation/native';
 import{createNativeStackNavigator} from '@react-navigation/native-stack';
 
 function WelcomeScreen(props) {
-<<<<<<< Updated upstream
+
   return (
  
    <View style={styles.container}>
@@ -82,7 +82,6 @@ function WelcomeScreen(props) {
 //      );
 //    }
 // }
-=======
   console.log(props);
   return(
     <View style={styles.container}>
@@ -119,10 +118,10 @@ function WelcomeScreen(props) {
        
       </View>
     );
-}
+
 
 const Stack = createNativeStackNavigator();
->>>>>>> Stashed changes
+
 
 const styles = StyleSheet.create({
     background: {
