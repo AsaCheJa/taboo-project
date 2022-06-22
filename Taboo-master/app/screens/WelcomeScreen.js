@@ -4,8 +4,11 @@ import {
     View, TextInput, TouchableOpacity
 } from 'react-native';
 import React from 'react';
+import{NavigationContainer} from '@react-navigation/native';
+import{createNativeStackNavigator} from '@react-navigation/native-stack';
 
 function WelcomeScreen(props) {
+<<<<<<< Updated upstream
   return (
  
    <View style={styles.container}>
@@ -79,6 +82,47 @@ function WelcomeScreen(props) {
 //      );
 //    }
 // }
+=======
+  console.log(props);
+  return(
+    <View style={styles.container}>
+        <Image style={{width: 100, height: 100}}
+              source={require('../assets/LOGO.png')}/>
+        <Text style={styles.logo}>PERIOD CARE THAT{"\n"}CARES.</Text>
+        <View style={styles.inputView}>
+          <TextInput style={styles.inputText}
+                    placeholder="Email"
+                    placeholderTextColor="black"
+                    onChangeText={text => this.setState({email:text})}/>
+        </View>
+        <View style={styles.inputView}>
+          <TextInput secureTextEntry
+                    style={styles.inputText}
+                    placeholder="Password"
+                    placeholderTextColor="black"
+                    onChangeText={text => this.setState({password:text})}/>
+        </View>
+        <TouchableOpacity>
+            <Text style={styles.forgot}>Forgot Password?</Text>
+        </TouchableOpacity>
+        
+        <TouchableOpacity  style={styles.loginBtn}>
+        <Text style={styles.loginText}>LOG IN</Text>
+        </TouchableOpacity>
+        
+        <View style={styles.row}>
+          <Text>New to Taboo?   </Text>
+        <TouchableOpacity onPress={()=>{props.navigation.navigate('SignUpScreen')}}>
+            <Text style={styles.signUpText}>Sign Up</Text>
+        </TouchableOpacity>
+        </View>
+       
+      </View>
+    );
+}
+
+const Stack = createNativeStackNavigator();
+>>>>>>> Stashed changes
 
 const styles = StyleSheet.create({
     background: {
